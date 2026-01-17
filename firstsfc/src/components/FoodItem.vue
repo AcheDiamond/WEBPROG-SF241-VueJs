@@ -9,8 +9,8 @@
 export default {
   data() {
     return {
-      name: 'Boorgir/ Sandwitch',
-      message: 'I like Habit, In-N-Out, Chic-fil-A'
+      name: 'Burger,Sandwich',
+      message: 'The burgers/sandwiches from Habit, In-N-Out, Chic-fil-A are stupidly delicioso'
     }
   }
 };
