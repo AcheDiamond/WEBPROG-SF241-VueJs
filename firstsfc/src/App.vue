@@ -1,8 +1,9 @@
 <template>
-  <h1>Favorite Burger/Sandwich Joints</h1>
+  <h1>Food and Entertainment</h1>
   <food-item/>
   <food-item/>
-  <food-item/>
+  <food-item2/>
+  <food-item2/>
 </template>
 
 <script></script>
