@@ -15,3 +15,14 @@ export default {
   }
 };
 </script>
+
+<style>
+.Burger {
+    border: dashed rgba(244, 178, 178, 0.84) 1px;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(203, 0, 0);
+  }
+
+</style>
