@@ -1,0 +1,265 @@
+:root {
+  --primary: #2563eb;
+  --primary-soft: #dbeafe;
+  --bg-main: #f8fafc;
+  --bg-alt: #f1f5f9;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --card-bg: #ffffff;
+  --border-soft: #e5e7eb;
+}
+
+/* ---------- GLOBAL RESET ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ---------- NAVBAR ---------- */
+.nav-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+.navbar .nav-link {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+  color: var(--primary);
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-title {
+  letter-spacing: -0.03em;
+}
+
+.hero-muted {
+  color: var(--text-muted);
+}
+
+.hero-name {
+  color: var(--primary);
+}
+
+.typing {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.typing-cursor {
+  color: var(--primary);
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.scroll-hint {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ---------- SECTION LAYOUT ---------- */
+.content-section {
+  padding: 5rem 0;
+}
+
+.section-alt {
+  background-color: var(--bg-alt);
+}
+
+.section-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.section-title {
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+}
+
+/* ---------- CARDS ---------- */
+.profile-card {
+  background: var(--card-bg);
+  border-radius: 1rem;
+  padding: 1.75rem;
+  border: 1px solid var(--border-soft);
+  position: relative;
+}
+
+.card-badge {
+  position: absolute;
+  top: -0.75rem;
+  left: 1.25rem;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* ---------- PROFILE IMAGE ---------- */
+.profile-img-container {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.profile-img {
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+/* ---------- QUICK INFO ---------- */
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+}
+
+.quick-chip {
+  background: var(--primary-soft);
+  border-radius: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* ---------- SKILLS ---------- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.skill-tile {
+  background: var(--card-bg);
+  border: 1px solid var(--border-soft);
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ---------- HOBBIES ---------- */
+.hobbies-bg {
+  background-image: linear-gradient(180deg, var(--bg-alt), var(--bg-main));
+}
+
+/* ---------- GALLERY (from images.css) ---------- */
+.carousel-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.carousel-btn {
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.carousel-frame {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.carousel-frame img {
+  max-width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--border-soft);
+  cursor: pointer;
+}
+
+.dot.active {
+  background: var(--primary);
+}
+
+/* ---------- CONTACT / GUESTBOOK ---------- */
+.guest-entry {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.copy-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.copy-toast.show {
+  opacity: 1;
+}
+
+/* ---------- FOOTER ---------- */
+.footer-soft {
+  background: var(--bg-main);
+}
